@@ -135,8 +135,8 @@ A list of python versions with its released date is given below.
 ![](d https://media.geeksforgeeks.org/wp-content/uploads/python_working.png)
 
                 
-#Installation of Anaconda Distribution and other python IDE
-- ##Installing Anaconda on Windows
+# Installation of Anaconda Distribution and other python IDE
+## Installing Anaconda on Windows
 1. Download the Anaconda installer.
 2.  Verify data integrity with SHA-256.
 	- We do not recommend using MD5 verification as SHA-256 is more secure.
@@ -146,12 +146,12 @@ A list of python versions with its released date is given below.
 	Get-FileHash filename -Algorithm SHA256
 	```
 	- If you dont have PowerShell V4 or later:
-	Use the free online verifier tool on the Microsoft website.
-		(1) Download the file and extract it.
-		(2) Open a Command Prompt window.
-		(3) Navigate to the file.
-		(4) Run the following command:
-			Start-PsFCIV -Path C:pathtofile.ext -HashAlgorithm SHA256 -Online
+	Use the free online verifier tool on the Microsoft website.<br />
+		(1) Download the file and extract it.<br />
+		(2) Open a Command Prompt window.<br />
+		(3) Navigate to the file.<br />
+		(4) Run the following command:<br />
+			Start-PsFCIV -Path C:pathtofile.ext -HashAlgorithm SHA256 -Online<br />
 3. Double click the installer to launch.
 4. Click Next.
 5. Read the licensing terms and click “I Agree”.
@@ -166,7 +166,7 @@ A list of python versions with its released date is given below.
 14. Verify your installation.
 	- Windows: Click Start, search or select Anaconda Navigator from the menu.
 
-- ##Installing PyCharm on Windows
+## Installing PyCharm on Windows
 1. To download PyCharm visit the website https://www.jetbrains.com/pycharm/download/ and Click the **DOWNLOAD** link under the Community Section.
 2. Once the download is complete, run the exe for install PyCharm. The setup wizard should have started. Click **Next**.
 3. On the next screen, Change the installation path if required. Click **Next**.
