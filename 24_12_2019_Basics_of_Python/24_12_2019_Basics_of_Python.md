@@ -47,7 +47,7 @@ either UNIX or GNU style.
 - As a default optional argument, it includes -h, along with its long version --help. 
 This argument is accompanied by a default help message describing the argument.
 
-####Example : Basic usage of the argparse module
+#### Example : Basic usage of the argparse module
 
 ```sh
 # include standard modules
@@ -57,7 +57,7 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.parse_args()
 ```
-####Output:
+#### Output:
 
 ```sh
 $ python3 arguments-argparse-basic.py 
@@ -73,6 +73,7 @@ usage: arguments-argparse-basic.py [-h]
 arguments-argparse-basic.py: error: unrecognized arguments: --verbose
 $
 ```
+
 - As the next step, we will add a **custom description to the help message**.
 - Initializing the parser allows an additional text.
 - Example given below stores the description in the text variable, which is explicitly 
@@ -89,7 +90,8 @@ program description.'
 parser = argparse.ArgumentParser(description = text)
 parser.parse_args()
 ```
-####Output:
+#### Output:
+
 ```sh
 $ python3 arguments-argparse-description.py --help
 usage: arguments-argparse-description.py [-h]
@@ -100,6 +102,7 @@ program description.
 optional arguments:
   -h, --help  show this help message and exit
 ```
+
 - As the final step we will add an optional argument named -V (UNIX style), which has a 
 corresponding GNU style argument named **--version**.
 - To do so we use the method **add_argument()** that we call with three parameters 
@@ -114,7 +117,8 @@ method from the parser object.
 - Finally, you check if the attributes **args.V** or **args.version** are set and output 
 the version message.
 
-####Example : Defining an optional argument
+#### Example : Defining an optional argument
+
 ```sh
 # include standard modules
 import argparse
@@ -127,7 +131,8 @@ args = parser.parse_args()
 if args.version:
     print("this is myprogram version 0.1")
 ```
-####Output:
+#### Output:
+
 ```sh
 $ python3 arguments-argparse-optional.py -V
 this is myprogram version 0.1
@@ -143,7 +148,8 @@ volume, height, or width.
 - This is shown in the next example. As a default case, please** note that all the 
 arguments are interpreted as strings**.
 
-####Example : Defining an optional argument with value
+#### Example : Defining an optional argument with value
+
 ```sh
 # include standard modules
 import argparse
@@ -157,7 +163,8 @@ args = parser.parse_args()
 if args.width:
     print("set output width to %s" % args.width)
 ```
-####Output:
+
+#### Output:
 ```sh
 $ python3 arguments-argparse-optional2.py -w 10
 set output width to 10
@@ -173,6 +180,7 @@ optional arguments:
   --width WIDTH, -w WIDTH
                         set output width
 ```
+
 - **sys** is fully flexible whereas both **getoptand**, **argparse** require some 
 structure.
 - In contrast, they cover most of the complex work that sys leaves to your hands.
@@ -239,10 +247,11 @@ into a number we can use int() or float() functions.
 ## Variables in Python
 - A variable is a named location used to store data in the memory.
 
-	```number = 10
+```sh
+number = 10
 ```
 
-####Example 3: Assigning multiple values to multiple variables
+#### Example 3: Assigning multiple values to multiple variables
 
 ```sh
 a, b, c = 5, 3.2, "Hello"
@@ -280,7 +289,7 @@ When you run the program, the output will be:
 9.8
 ```
 
-###Literals
+### Literals
 - Literal is a raw data given in a variable or constant. In Python, there are various 
 types of literals they are as follows:
 
@@ -289,7 +298,7 @@ types of literals they are as follows:
 		- Numeric literals can belong to 3 different numerical types Integer, 
 Float, and Complex.
 
-	####Example : How to use Numeric literals in Python?
+	#### Example : How to use Numeric literals in Python?
 
 ```sh
 a = 0b1010 #Binary Literals
@@ -308,13 +317,13 @@ print(a, b, c, d)
 print(float_1, float_2)
 print(x, x.imag, x.real)
 ```
-#####Output:
+##### Output:
 ```sh
 10 100 200 300
 10.5 150.0
 3.14j 3.14 0.0
 ```
-####String literals
+#### String literals
 - A string literal is a sequence of characters surrounded by quotes.
 - We can use both **single**, **double** or **triple quotes** for a string. And, a 
 character literal is a single character surrounded by single or double quotes.
@@ -332,10 +341,10 @@ print(multiline_str)
 print(unicode)
 print(raw_str)
 ```
-####Boolean literals
+#### Boolean literals
 - A Boolean literal can have any of the two values: **True** or **False**.
 
-####Example : How to use boolean literals in Python?
+#### Example : How to use boolean literals in Python?
 
 ```sh
 x = (1 == True)
@@ -348,7 +357,7 @@ print("a:", a)
 print("b:", b)
 ```
 
-####Special literals
+#### Special literals
 - Python contains one special literal i.e. **None**. We use it to specify to that field 
 that is not created.
 
@@ -412,6 +421,7 @@ print(a >> 2)
 print(a << 2) 
 ```
 ##### Output:
+
 ```sh
 0
 14
