@@ -132,7 +132,7 @@ A list of python versions with its released date is given below.
  Python doesn't convert its code into machine code. It actually converts it into something called byte code.
 
  So within python, compilation happens, but its just not into a machine language. It is into **byte code** and this byte code can	t be understood by CPU. So we need actually an interpreter called the python virtual machine. The python virtual machine executes the byte codes.
-![](d https://media.geeksforgeeks.org/wp-content/uploads/python_working.png)
+![](https://media.geeksforgeeks.org/wp-content/uploads/python_working.png)
 
                 
 # Installation of Anaconda Distribution and other python IDE
