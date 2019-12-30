@@ -214,8 +214,9 @@ print(type(a))
 	- We cannot access or change an element of set using indexing or slicing. Set does not support it.
 	- We can add single element using the **add()** method and multiple elements using the **update()** method.
 	- The update() method can take tuples, lists, strings or other sets as its argument. In all cases, duplicates are avoided.
-	```sh
-	# initialize my_set
+
+```sh
+# initialize my_set
 my_set = {1,3}
 print(my_set)
 # add an element
@@ -230,7 +231,7 @@ print(my_set)
 # Output: {1, 2, 3, 4, 5, 6, 8}
 my_set.update([4,5], {1,6,8})
 print(my_set)
-	```
+```
 
 - ##### How to remove elements from a set?
 - A particular item can be removed from set using methods, **discard()** and **remove()**.
@@ -277,6 +278,7 @@ print(my_set)
 - Sets can be used to carry out mathematical set operations like union, intersection, difference and symmetric difference. We can do this with operators or methods.
 
 Let us consider the following two sets for the following operations.
+
 ```sh
 A = {1, 2, 3, 4, 5}
 B = {4, 5, 6, 7, 8}
