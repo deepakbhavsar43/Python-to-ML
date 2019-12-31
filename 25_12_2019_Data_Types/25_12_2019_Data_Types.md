@@ -395,8 +395,101 @@ print(c)
 | update() | Updates the set with the union of itself and others |
 
 ## Range in python
+- Pythons built-in range function is handy when you need to perform an action a specific number of times. 
+- **range()** in Python 2 and **range()** in Python 3 may share a name, they are entirely different 
+##### The below example 
+```sh
+x = range(6)
+print(type(x))
+for n in x:
+  print(n)
+```
+##### Output :
+```sh
+<class 'range'>
+0
+1
+2
+3
+4
+5
+```
+#### Range Objects with Float Numbers
+- The range function does not work with floats. Only integer values can be specified as the start, stop and step arguments.
+```sh
+# floats with python range
+for i in range(0.1, 0.5, 0.1):
+    print(i)
+```
+##### Output :
+```sh
+TypeError                                 Traceback (most recent call last)
+<ipython-input-13-a83306d87fcd> in <module>
+       # floats with python range
+       for i in range(0.1, 0.5, 0.1):
+           print(i)
+TypeError: 'float' object cannot be interpreted as an integer
+```
+- There are three ways you can call range():
+	- range(stop) takes one argument.
+	- range(start, stop) takes two arguments.
+	- range(start, stop, step) takes three arguments.
+	
+#### range(stop)
+- When you call range() with one argument, you will get a series of numbers that starts at 0 and includes every whole number up to, but not including, the number you have provided as the stop.
+
+```sh
+for i in range(3):
+    print(i)
+```
+
+##### Output :
+```sh
+0
+1
+2
+```
+
+#### range(start, stop)
+- When you call range() with two arguments, you get to decide not only where the series of numbers stops but also where it starts, so you dont have to start at 0 all the time. You can use range() to generate a series of numbers from A to B using a range(A, B). Lets find out how to generate a range starting at 1.
+
+```sh
+for i in range(1, 8):
+    print(i)
+```
+##### Output :
+```sh
+1
+2
+3
+4
+5
+6
+7
+```
+
+#### range(start, stop, step)
+- When you call range() with three arguments, you can choose not only where the series of numbers will start and stop but also how big the difference will be between one number and the next.
+- If you dont provide a step, then range() will automatically behave as if the step is 1.
+
+```sh
+for i in range(3, 16, 3):
+    quotient = i / 3
+    print(f"{i} divided by 3 is {int(quotient)}.")
+```
+
+##### Output :
+
+```sh
+3 divided by 3 is 1.
+6 divided by 3 is 2.
+9 divided by 3 is 3.
+12 divided by 3 is 4.
+15 divided by 3 is 5.
+```
 
 ## String in Python
+
 
 ## Dictionaries and its use
 
@@ -428,6 +521,10 @@ print(c)
 - https://www.geeksforgeeks.org/sets-in-python/
 
 ### Range in python
+- https://realpython.com/python-range/#the-history-of-pythons-range-function
+- https://www.dataquest.io/blog/python-range-tutorial/
+- https://pynative.com/python-range-function/
+
 ### String in Python
 ### Dictionaries and its use
 ### Array and its types
