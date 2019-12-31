@@ -256,8 +256,24 @@ number = 10
 ```sh
 a, b, c = 5, 3.2, "Hello"
 print (a)
+print (type(a))
+
 print (b)
+print (type(b))
+
 print (c)
+print (type(c))
+```
+
+##### Output :
+
+```sh
+5
+<class 'int'>
+3.2
+<class 'float'>
+Hello
+<class 'str'>
 ```
 
 ### Constants
@@ -271,6 +287,7 @@ Assigning value to a constant in Python
 to main file.
 - Inside the module, constants are written in **all capital letters** and underscores 
 separating the words.
+
 ####Example : Declaring and assigning value to a constant
 Create a constant.py
 ```sh
@@ -391,6 +408,28 @@ print(numbers)
 print(alphabets)
 print(vowels)
 ```
+
+### Object Identity
+- In Python, every object that is created is given a number that uniquely identifies it.
+- It is guaranteed that no two objects will have the same identifier during any period in which their lifetimes overlap
+- The built-in Python function **id()** returns an object’s integer identifier.
+
+##### Example :
+
+```sh
+m = 30
+print(id(m))
+n =30
+print(id(n))
+```
+
+##### Output :
+
+```sh
+1820157488
+1820157488
+```
+
 ## Operators
 ### Arithmetic operators in Python
 - Arithmetic operators are used with numeric values to perform common mathematical 
@@ -433,7 +472,6 @@ print(a << 2)
 
 ### Comparison operators in Python (Relational Operators)
 -  compares the values. It either returns True or False according to the condition.
-
 ![](https://www.engineeringbigdata.com/wp-content/uploads/python-comparison-operators.jpg)
 ```sh
 # Examples of Relational Operators 
@@ -495,6 +533,7 @@ z = 1j   # complex
 #### Variables in Python
 - https://www.programiz.com/python-programming/variables-constants-literals
 - https://www.w3schools.com/python/python_variables.asp
+- https://realpython.com/python-variables/#object-identity
 
 #### Operators in Python
 - https://www.geeksforgeeks.org/basic-operators-python/
@@ -506,4 +545,3 @@ z = 1j   # complex
 
 #### Numbers in Python
 - https://www.w3schools.com/python/python_numbers.asp
-
