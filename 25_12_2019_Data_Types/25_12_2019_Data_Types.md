@@ -1,4 +1,3 @@
-
 ## Data types in Python
 - Python provides various standard data types that define the storage method on each of them. The data types defined in Python are given below.
 
@@ -487,17 +486,662 @@ for i in range(3, 16, 3):
 12 divided by 3 is 4.
 15 divided by 3 is 5.
 ```
+#### Access Python range() result with its index value
+- **range()** is constructor returns a range object which is nothing but a sequence of numbers, this range object can also be accessed by its index using slice notation.
 
+```sh
+print("accessing python range objet with its index")
+first_number = range(0,10)[0] #printing 0th position number i.e. index ZERO means first number
+print("First number in given range is:  ", first_number)
+fifth_number = range(0,10)[4]
+print("fifth number in given range is:  ", fifth_number)
+```
+##### Output :
+```sh
+accessing python range objet with its index
+First number in given range is:   0
+fifth number in given range is:   4
+```
 ## String in Python
+- A string is a sequence of characters.
+- Strings can be created by enclosing characters inside a **single quote** or **double quotes**. Even **triple quotes** can be used in Python but generally used to represent multiline strings and docstrings.
 
+```sh
+# all of the following are equivalent
+my_string = 'Hello'
+print(my_string)
+
+my_string = "Hello"
+print(my_string)
+
+my_string = '''Hello'''
+print(my_string)
+
+# triple quotes string can extend multiple lines
+my_string = """Hello, welcome to
+           the world of Python"""
+print(my_string)
+```
+##### Output :
+```sh
+Hello
+Hello
+Hello
+Hello, welcome to
+           the world of Python
+```
+
+- We **can access individual characters** using indexing and a range of characters using slicing. Index starts from 0.
+
+```sh
+str = 'programiz'
+print('str = ', str)
+#first character
+print('str[0] = ', str[0])
+#last character
+print('str[-1] = ', str[-1])
+#slicing 2nd to 5th character
+print('str[1:5] = ', str[1:5])
+#slicing 6th to 2nd last character
+print('str[5:-2] = ', str[5:-2])
+```
+##### Output :
+
+```sh
+# index must be in range
+my_string[15]  
+...
+IndexError: string index out of range
+# index must be an integer
+my_string[1.5] 
+...
+TypeError: string indices must be integers
+```
+- Slicing can be best visualized by considering the index to be between the elements as shown below.
+- If we want to access a range, we need the index that will slice the portion from the string.
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/String-Indexing.jpg)
+
+- Strings are **immutable**. This means that elements of a string cannot be changed once it has been assigned.
+
+```sh
+ >>>my_string = 'programiz'
+ >>>my_string[5] = 'a'
+...
+TypeError: 'str' object does not support item assignment
+```
+### Python String Operations
+#### Concatenation of Two or More Strings
+- Joining of two or more strings into a single one is called concatenation.
+- The + operator does this in Python. Simply writing two string literals together also concatenates them.
+- The * operator can be used to repeat the string for a given number of times.
+
+```sh
+str1 = 'Hello'
+str2 ='World!'
+# using +
+print('str1 + str2 = ', str1 + str2)
+# using *
+print('str1 * 3 =', str1 * 3)
+```
+
+##### Output :
+```sh
+str1 + str2 =  HelloWorld!
+str1 * 3 = HelloHelloHello
+```
+
+#### Iterating through String
+- Using for loop we can iterate through a string. Here is an example to count the number of 'a' in a string.
+
+```sh
+count = 0
+for letter in 'Hello World':
+    if(letter == 'l'):
+        count += 1
+print(count,'letters found')
+```
+
+##### Output :
+```sh
+3 letters found
+```
+#### String Membership Test
+- We can test if a sub string exists within a string or not, using the keyword **in**.
+
+```sh
+>>> 'a' in 'program'
+True
+>>> 'at' not in 'battle'
+False
+```
+
+#### Built-in functions to Work with Python
+- Some of the commonly used ones are enumerate() and len().
+- The **enumerate()** function returns an enumerate object. It contains the index and value of all the items in the string as pairs. This can be useful for iteration.
+- Similarly, **len()** returns the length (number of characters) of the string.
+
+```sh
+str = 'Deepak'
+# enumerate()
+list_enumerate = list(enumerate(str))
+print('list(enumerate(str) = ', list_enumerate)
+#character count
+print('len(str) = ', len(str))
+```
+
+##### Output :
+
+```sh
+list(enumerate(str) =  [(0, 'D'), (1, 'e'), (2, 'e'), (3, 'p'), (4, 'a'), (5, 'k')]
+len(str) =  6
+```
+#### Common Python String Methods
+- There are numerous methods available with the string object.
+- The **format()** method that we mentioned above is one of them. Some of the commonly used methods are **lower()**, **upper()**,** join()**, **split()**, **find()**, **replace()** etc. 
+
+```sh
+"PrOgRaMiZ".lower()
+#Output : programmiz
+"PrOgRaMiZ".upper()
+#Output : PROGRAMIZ
+"This will split all words into a list".split()
+#Output : ['This', 'will', 'split', 'all', 'words', 'into', 'a', 'list']
+' '.join(['This', 'will', 'join', 'all', 'words', 'into', 'a', 'string'])
+#Output : 'This will join all words into a string'
+'Happy New Year'.find('ew')
+#Output : 7
+'Happy New Year'.replace('Happy','Brilliant')
+#Output : 'Brilliant New Year'
+```
 
 ## Dictionaries and its use
+- Dictionaries are Pythons implementation of a data structure that is more generally known as an associative array.
+- A dictionary consists of a collection of key-value pairs. Each key-value pair maps the key to its associated value.
+- You can define a dictionary by enclosing a comma-separated list of key-value pairs in curly braces (**{}**). A colon (**:**) separates each key from its associated value.
+- The following defines a dictionary that maps a location to the name of its corresponding Major League Baseball team:
+
+```sh
+MLB_team = {
+     'Colorado' : 'Rockies',
+     'Boston'   : 'Red Sox',
+     'Minnesota': 'Twins',
+     'Milwaukee': 'Brewers',
+     'Seattle'  : 'Mariners'
+}
+```
+
+![](https://files.realpython.com/media/t.b3e3d8f2d100.png)
+
+- You can also construct a dictionary with the built-in **dict()** function. The argument to dict() should be a sequence of **key-value pairs.** A list of tuples works well for this:
+
+```sh
+MLB_team = dict([
+     ('Colorado', 'Rockies'),
+     ('Boston', 'Red Sox'),
+     ('Minnesota', 'Twins'),
+     ('Milwaukee', 'Brewers'),
+     ('Seattle', 'Mariners')
+])
+```
+#### Nested Dictionary
+
+```sh
+# Creating a Nested Dictionary 
+# as shown in the below image 
+Dict = {1: 'Geeks', 2: 'For', 
+		3:{'A' : 'Welcome', 'B' : 'To', 'C' : 'Geeks'}} 
+```
+![](https://media.geeksforgeeks.org/wp-content/uploads/Dictionary-Creation-1.jpg)
+
+- Dictionary elements are not accessed by numerical index:
+
+```sh
+MLB_team[1]
+Traceback (most recent call last):
+  File "<pyshell#13>", line 1, in <module>
+    MLB_team[1]
+KeyError: 1
+```
+#### Accessing Dictionary Values
+
+```sh
+MLB_team['Minnesota']
+'Twins'
+MLB_team['Colorado']
+'Rockies'
+```
+- If you refer to a key that is not in the dictionary, Python raises an exception:
+
+```sh
+>>>MLB_team['Toronto']
+Traceback (most recent call last):
+  File "<pyshell#19>", line 1, in <module>
+    MLB_team['Toronto']
+KeyError: 'Toronto'
+```
+- Adding an entry to an existing dictionary is simply a matter of assigning a new key and value:
+
+```sh
+>>>MLB_team['Kansas City'] = 'Royals'
+>>> MLB_team
+{'Colorado': 'Rockies', 'Boston': 'Red Sox', 'Minnesota': 'Twins',
+'Milwaukee': 'Brewers', 'Seattle': 'Mariners', 'Kansas City': 'Royals'}
+```
+- If you want to update an entry, you can just assign a new value to an existing key:
+
+```sh
+>>> MLB_team['Seattle'] = 'Seahawks'
+>>> MLB_team
+{'Colorado': 'Rockies', 'Boston': 'Red Sox', 'Minnesota': 'Twins',
+'Milwaukee': 'Brewers', 'Seattle': 'Seahawks', 'Kansas City': 'Royals'}
+```
+- To delete an entry, use the del statement, specifying the key to delete:
+
+```sh
+>>> del MLB_team['Seattle']
+>>> MLB_team
+{'Colorado': 'Rockies', 'Boston': 'Red Sox', 'Minnesota': 'Twins',
+'Milwaukee': 'Brewers', 'Kansas City': 'Royals'}
+```
+
+#### Restrictions on Dictionary Keys
+- Almost any type of value can be used as a dictionary key in Python. You just saw this example, where integer, float, and Boolean objects are used as keys:
+
+```sh
+>>> foo = {42: 'aaa', 2.78: 'bbb', True: 'ccc'}
+>>> foo
+{42: 'aaa', 2.78: 'bbb', True: 'ccc'}
+```
+- You can even use built-in objects like types and functions:
+
+```sh
+>>> d = {int: 1, float: 2, bool: 3}
+>>> d
+{<class 'int'>: 1, <class 'float'>: 2, <class 'bool'>: 3}
+>>> d[float]
+2
+>>> d = {bin: 1, hex: 2, oct: 3}
+>>> d[oct]
+3
+```
+
+- A tuple can also be a dictionary key, because tuples are immutable:
+
+```sh
+>>> d = {(1, 1): 'a', (1, 2): 'b', (2, 1): 'c', (2, 2): 'd'}
+>>> d[(1,1)]
+'a'
+>>> d[(2,1)]
+'c'
+```
+- neither a list nor another dictionary can serve as a dictionary key, because lists and dictionaries are mutable:
+
+```sh
+>>> d = {[1, 1]: 'a', [1, 2]: 'b', [2, 1]: 'c', [2, 2]: 'd'}
+Traceback (most recent call last):
+  File "<pyshell#20>", line 1, in <module>
+    d = {[1, 1]: 'a', [1, 2]: 'b', [2, 1]: 'c', [2, 2]: 'd'}
+TypeError: unhashable type: 'list'
+```
+#### Restrictions on Dictionary Values
+- There are no restrictions on dictionary values. Literally none at all. 
+- A dictionary value can be any type of object Python supports, including mutable types like lists and dictionaries, and user-defined objects.
+- There is also no restriction against a particular value appearing in a dictionary multiple times:
+
+```sh
+>>> d = {0: 'a', 1: 'a', 2: 'a', 3: 'a'}
+>>> d
+{0: 'a', 1: 'a', 2: 'a', 3: 'a'}
+>>> d[0] == d[1] == d[2]
+True
+```
+
+#### Operators and Built-in Functions
+- For example, the **in** and **not** in operators return True or False according to whether the specified operand occurs as a key in the dictionary:
+
+```sh
+>>> MLB_team = {
+    'Colorado' : 'Rockies',
+    'Boston'   : 'Red Sox',
+    'Minnesota': 'Twins',
+    'Milwaukee': 'Brewers',
+    'Seattle'  : 'Mariners'
+}
+>>> 'Milwaukee' in MLB_team
+True
+>>> 'Toronto' in MLB_team
+False
+>>> 'Toronto' not in MLB_team
+True
+```
+
+- The **len()** function returns the number of key-value pairs in a dictionary:
+
+```sh
+>>> MLB_team = {
+...     'Colorado' : 'Rockies',
+...     'Boston'   : 'Red Sox',
+...     'Minnesota': 'Twins',
+...     'Milwaukee': 'Brewers',
+...     'Seattle'  : 'Mariners'
+... }
+>>> len(MLB_team)
+5
+```
+#### Built-in Dictionary Methods
+- There are several built-in methods that can be invoked on dictionaries. In fact, in some cases, the list and dictionary methods share the same name.
+
+- **clear()** empties dictionary d of all key-value pairs:
+
+```sh
+>>> d
+{'a': 10, 'b': 20, 'c': 30}
+>>> d.clear()
+>>> d
+{}
+```
+- The Python dictionary **.get()** method provides a convenient way of getting the value of a key from a dictionary without checking ahead of time whether the key exists, and **without raising an error**.
+- get(<key>) searches dictionary d for <key> and returns the associated value if it is found. If <key> is not found, it returns None:
+
+```sh
+>>> d = {'a': 10, 'b': 20, 'c': 30}
+>>> print(d.get('b'))
+20
+>>> print(d.get('z'))
+None
+```
+- If <key> is not found and the optional <default> argument is specified, that value is returned instead of None:
+
+```sh
+>>> print(d.get('z', -1))
+-1
+```
+
+- **items()**  returns a list of tuples containing the key-value pairs in d. The first item in each tuple is the key, and the second item is the keys value:
+
+```sh
+>>> d = {'a': 10, 'b': 20, 'c': 30}
+>>> d
+{'a': 10, 'b': 20, 'c': 30}
+
+>>> list(d.items())
+[('a', 10), ('b', 20), ('c', 30)]
+>>> list(d.items())[1][0]
+'b'
+>>> list(d.items())[1][1]
+20
+```
+- **keys()** returns a list of all keys in d:
+
+```sh
+>>> d = {'a': 10, 'b': 20, 'c': 30}
+>>> d
+{'a': 10, 'b': 20, 'c': 30}
+>>> list(d.keys())
+['a', 'b', 'c']
+```
+
+- **values()** returns a list of all values in d:
+
+```sh
+>>> d = {'a': 10, 'b': 20, 'c': 30}
+>>> d
+{'a': 10, 'b': 20, 'c': 30}
+>>> list(d.values())
+[10, 20, 30]
+```
+
+- pop(**key**) removes **key** and returns its associated value and raises an exception if key is not present in dictionary.
+
+```sh
+>>> d = {'a': 10, 'b': 20, 'c': 30}
+>>> d.pop('b')
+20
+>>> d
+{'a': 10, 'c': 30}
+>>> d.pop('z')
+Traceback (most recent call last):
+  File "<pyshell#4>", line 1, in <module>
+    d.pop('z')
+KeyError: 'z'
+```
+- **popitem()** removes a random, arbitrary key-value pair from d and returns it as a tuple:
+
+```sh
+>>> d.popitem()
+('c', 30)
+>>> d
+{'a': 10, 'b': 20}
+>>> d.popitem()
+('b', 20)
+>>> d
+{'a': 10}
+>>>d={}
+>>>d.popitem()
+Traceback (most recent call last):
+  File "<pyshell#11>", line 1, in <module>
+    d.popitem()
+KeyError: 'popitem(): dictionary is empty'
+```
+
+- **update(obj)** Merges a dictionary with another dictionary or with an iterable of key-value pairs.
+- If <obj> is a dictionary, d.update(<obj>) merges the entries from <obj> into d. For each key in <obj>:
+	- If the key is not present in d, the key-value pair from <obj> is added to d.
+	- If the key is already present in d, the corresponding value in d for that key is updated to the value from <obj>.
+
+Here is an example showing two dictionaries merged together:
+
+```sh
+>>> d1 = {'a': 10, 'b': 20, 'c': 30}
+>>> d2 = {'b': 200, 'd': 400}
+>>> d1.update(d2)
+>>> d1
+{'a': 10, 'b': 200, 'c': 30, 'd': 400}
+```
 
 ## Array and its types
+- Array in Python can be created by importing array module. array(data_type, value_list) is used to create an array with data type and value list specified in its arguments.
+-  we need to import array module to create arrays. For example:
 
-## Manipulate different types of array
+```sh
+import array as arr
+a = arr.array('d', [1.1, 3.5, 4.5])
+print(a)
+```
+##### Output :
+
+```sh
+array('d', [1.1, 3.5, 4.5])
+```
+- we created an array of float type. The letter 'd' is a type code. This determines the type of the array during creation.
+
+Commonly used type codes:
+
+![](https://www.askpython.com/wp-content/uploads/2019/09/python-array-supported-type-code-1024x624.png)
+
+- We use indices to **access elements of an array**:
+
+```sh
+import array as arr
+a = arr.array('i', [2, 4, 6, 8])
+print("First element:", a[0])
+print("Second element:", a[1])
+print("Last element:", a[-1])
+```
+##### Output :
+
+```sh
+C:\Users\deepak.bhavsar\Desktop>python 1.py
+First element: 2
+Second element: 4
+Last element: 8
+```
+- We can access a range of items in an array by using the slicing operator :
+
+```sh
+import array as arr
+numbers_list = [2, 5, 62, 5, 42, 52, 48, 5]
+numbers_array = arr.array('i', numbers_list)
+print(numbers_array[2:5]) # 3rd to 5th
+print(numbers_array[:-5]) # beginning to 4th
+print(numbers_array[5:])  # 6th to end
+print(numbers_array[:])   # beginning to end
+```
+
+##### Output :
+```sh
+array('i', [62, 5, 42])
+array('i', [2, 5, 62])
+array('i', [52, 48, 5])
+array('i', [2, 5, 62, 5, 42, 52, 48, 5])
+```
+- Arrays are mutable; their elements can be changed in a similar way like lists.
+
+```sh
+import array as arr
+numbers = arr.array('i', [1, 2, 3, 5, 7, 10])
+# changing first element
+numbers[0] = 0    
+print(numbers)     # Output: array('i', [0, 2, 3, 5, 7, 10])
+# changing 3rd to 5th element
+numbers[2:5] = arr.array('i', [4, 6, 8])   
+print(numbers)     # Output: array('i', [0, 2, 4, 6, 8, 10])
+```
+ - We can add one item to a list using the append() method, or add several items using extend() method.
+
+```sh
+ import array as arr
+numbers = arr.array('i', [1, 2, 3])
+numbers.append(4)
+print(numbers)     # Output: array('i', [1, 2, 3, 4])
+# extend() appends iterable to the end of the array
+numbers.extend([5, 6, 7]) 
+print(numbers)     # Output: array('i', [1, 2, 3, 4, 5, 6, 7])
+ ```
+- We can delete one or more items from an array using Python's del statement.
+
+```sh
+import array as arr
+number = arr.array('i', [1, 2, 3, 3, 4])
+del number[2] # removing third element
+print(number) # Output: array('i', [1, 2, 3, 4])
+del number # deleting entire array
+print(number) # Error: array is not defined
+```
+
+- We can use the remove() method to remove the given item, and pop() method to remove an item at the given index.
+
+```sh
+import array as arr
+numbers = arr.array('i', [10, 11, 12, 12, 13])
+numbers.remove(12)
+print(numbers)   # Output: array('i', [10, 11, 12, 13])
+print(numbers.pop(2))   # Output: 12
+print(numbers)   # Output: array('i', [10, 11, 13])
+```
 
 ## Creation and use of multidimensional array
+- Two dimensional array is an array within an array. It is an array of arrays.
+
+#### Accessing Values in a Two Dimensional Array
+- The data elements in two dimesnional arrays can be accessed using two indices. One index referring to the main or parent array and another index referring to the position of the data element in the inner array.
+- If we mention only one index then the entire inner array is printed for that index position. The example below illustrates how it works.
+
+```sh
+from array import *
+T = [[11, 12, 5, 2], [15, 6,10], [10, 8, 12, 5], [12,15,8,6]]
+print(T[0])
+print(T[1][2])
+```
+##### Output :
+
+```sh
+[11, 12, 5, 2]
+10
+```
+- To print out the entire two dimensional array we can use python for loop as shown below. We use end of line to print out the values in different rows.
+
+```sh
+from array import *
+T = [[11, 12, 5, 2], [15, 6,10], [10, 8, 12, 5], [12,15,8,6]]
+for r in T:
+    for c in r:
+        print(c,end = " ")
+    print()
+```
+##### Output :
+
+```sh
+11 12 5 2 
+15 6 10 
+10 8 12 5 
+12 15 8 6 
+```
+##### Inserting Values in Two Dimensional Array
+- We can insert new data elements at specific position by using the insert() method and specifying the index. In the below example a new data element is inserted at index position 2.
+
+```sh
+from array import *
+T = [[11, 12, 5, 2], [15, 6,10], [10, 8, 12, 5], [12,15,8,6]]
+
+T.insert(2, [0,5,11,13,6])
+
+for r in T:
+    for c in r:
+        print(c,end = " ")
+    print()
+```
+##### Output :
+```sh
+11 12 5 2 
+15 6 10 
+0 5 11 13 6 
+10 8 12 5 
+12 15 8 6 
+```
+
+##### Updating Values in Two Dimensional Array
+- We can update the entire inner array or some specific data elements of the inner array by reassigning the values using the array index.
+
+```sh
+from array import *
+T = [[11, 12, 5, 2], [15, 6,10], [10, 8, 12, 5], [12,15,8,6]]
+T[2] = [11,9]
+T[0][3] = 7
+for r in T:
+    for c in r:
+        print(c,end = " ")
+    print()
+```
+
+##### Output :
+
+```sh
+11 12 5 7 
+15 6 10 
+11 9 
+12 15 8 6 
+```
+#### Deleting the Values in Two Dimensional Array
+- We can delete the entire inner array or some specific data elements of the inner array by reassigning the values using the **del()** method with index.
+
+```sh
+from array import *
+T = [[11, 12, 5, 2], [15, 6,10], [10, 8, 12, 5], [12,15,8,6]]
+del T[3]
+for r in T:
+    for c in r:
+        print(c,end = " ")
+    print()
+```
+##### Output :
+
+```sh
+11 12 5 2 
+15 6 10 
+10 8 12 5 
+```
 
 ## Reference links
 
@@ -526,7 +1170,20 @@ for i in range(3, 16, 3):
 - https://pynative.com/python-range-function/
 
 ### String in Python
+- https://www.programiz.com/python-programming/string
+- https://www.programiz.com/python-programming/methods/string (various python string methods)
+- https://www.w3schools.com/python/python_strings.asp
+- https://www.geeksforgeeks.org/python-strings/
+
 ### Dictionaries and its use
+- https://www.geeksforgeeks.org/python-dictionary/
+- https://www.programiz.com/python-programming/dictionary
+
 ### Array and its types
-### Manipulate different types of array
+- https://www.geeksforgeeks.org/python-arrays/
+- https://www.programiz.com/python-programming/array
+- https://www.thegeekstuff.com/2013/08/python-array/
+
 ### Creation and use of multidimensional array
+- https://www.tutorialspoint.com/python_data_structure/python_2darray.htm
+- https://www.geeksforgeeks.org/python-using-2d-arrays-lists-the-right-way/
