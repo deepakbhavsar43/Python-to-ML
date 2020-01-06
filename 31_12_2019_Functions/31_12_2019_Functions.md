@@ -69,7 +69,7 @@ print("The factorial of", num, "is", calc_factorial(num))
 - Recursive functions are hard to debug.
 
 ## Inner function and its calling techniques
-- we simply create a function inside another function using the Python's def keyword. Here is an example:
+- we simply create a function inside another function using the Python's **def** keyword. Here is an example:
 
 ```sh
 def function1(): # outer function
@@ -77,11 +77,73 @@ def function1(): # outer function
     def function2(): # inner function
         print ("Hello from inner function")
     function2()
-
 function1()
 ```
+##### Output :
+
+```sh
+Hello from outer function
+Hello from inner function
+```
+
+- In the above example, function2() has been defined inside function1(), making it an inner function.
+- To call function2(), we must first call function1().
+- The function1() will then go ahead and call function2() as it has been defined inside it.
+
 ## Returning multiple values from function
+- It is possible to return multiple values from a function in the form of tuple, list, dictionary or an object of a user defined class
+
+- **Return as tuple**
+
+```sh
+>>> def function():
+      a=10; b=10
+      return a,b
+
+>>> x=function()
+>>> type(x)
+<class 'tuple'>
+>>> x
+(10, 10)
+>>> x,y=function()
+>>> x,y
+(10, 10)
+```
+
+- **Return as object of user defined class**
+
+```sh
+>>> class tmp:
+def __init__(self, a,b):
+self.a=a
+self.b=b
+
+
+>>> def function():
+      a=10; b=10
+      t=tmp(a,b)
+      return t
+
+>>> x=function()
+>>> type(x)
+<class '__main__.tmp'>
+>>> x.a
+10
+>>> x.b
+10
+```
+
 ## User Defined Functions
+- Python, a user-defined function's declaration begins with the keyword def and followed by the function name.
+The function may take arguments(s) as input within the opening and closing parentheses, just after the function name followed by a colon.
+After defining the function name and arguments(s) a block of program statement(s) start at the next line and these statement(s) must be indented.
+- **Example:**
+
+```sh
+def avg_number(x, y):
+    print("Average of ",x," and ",y, " is ",(x+y)/2)
+avg_number(3, 4)
+```
 
 ## Reference Links
 ### Function and Function calling techniques
@@ -94,4 +156,7 @@ function1()
 - https://stackabuse.com/python-nested-functions/
 
 ### Returning multiple values from function
+- https://www.geeksforgeeks.org/g-fact-41-multiple-return-values-in-python/
+
 ### User Defined Functions
+- https://www.w3resource.com/python/python-user-defined-functions.php
