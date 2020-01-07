@@ -1,8 +1,8 @@
 ## Function arguments and its types
 - There are various types of Python arguments functions. Let’s learn them one by one:
-**Default Argument in Python**
-**Python Keyword Arguments**
-**Python Arbitrary Arguments**
+	- **Default Argument in Python**
+	- **Python Keyword Arguments**
+	- **Python Arbitrary Arguments**
 
 ## Required function / Position argument
 - Required arguments are the arguments passed to a function in correct positional order.
