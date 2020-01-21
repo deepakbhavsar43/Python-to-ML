@@ -430,6 +430,91 @@ print(id(n))
 1820157488
 ```
 
+### yeild in Python
+- The yield statement suspends function’s execution and sends a value back to the caller, but retains enough state to enable function to resume where it is left off. 
+- When resumed, the function continues execution immediately after the last yield run.
+- This allows its code to produce a series of values over time, rather than computing them at once and sending them back like a list.
+- We should use yield when we want to iterate over a sequence, but dont want to store the entire sequence in memory.
+- Yield are used in Python generators. A generator function is defined like a normal function, but whenever it needs to generate a value.
+
+##### Example:
+
+```sh
+# A Simple Python program to demonstrate working 
+# of yield 
+
+# A generator function that yields 1 for the first time, 
+# 2 second time and 3 third time 
+def simpleGeneratorFun(): 
+	yield 1
+	yield 2
+	yield 3
+
+# Driver code to check above generator function 
+for value in simpleGeneratorFun(): 
+	print(value) 
+```
+
+##### output:
+
+```sh
+1
+2
+3
+```
+
+### __name__ in pyhton
+- Since there is no main() function in Python, when the command to run a python program is given to the interpreter, the code that is at level 0 indentation is to be executed.
+- However, before doing that, it will define a few special variables.
+- \__name__ is one such special variable.
+- If the source file is executed as the main program, the interpreter sets the  \__name\__ variable to have a value \__main__. 
+- If this file is being imported from another module, __name__ will be set to the modules name.
+-  \__name__ is a built-in variable which evaluates to the name of the current module.
+
+##### File1.py
+```sh
+# File1.py 
+
+print "File1 __name__ = %s" %__name__ 
+
+if __name__ == "__main__": 
+	print "File1 is being run directly"
+else: 
+	print "File1 is being imported"
+```
+
+##### File2.py
+```sh
+# File2.py 
+
+import File1 
+
+print "File2 __name__ = %s" %__name__ 
+
+if __name__ == "__main__": 
+	print "File2 is being run directly"
+else: 
+	print "File2 is being imported"
+```
+
+##### Output:
+
+```sh
+Now the interpreter is given the command to run File1.py.
+python File1.py
+Output :
+File1 __name__ = __main__
+File1 is being run directly
+
+And then File2.py is run.
+python File2.py
+Output :
+File1 __name__ = File1
+File1 is being imported
+File2 __name__ = __main__
+File2 is being run directly
+```
+
 ## Operators
 ### Arithmetic operators in Python
 - Arithmetic operators are used with numeric values to perform common mathematical 
@@ -534,6 +619,8 @@ z = 1j   # complex
 - https://www.programiz.com/python-programming/variables-constants-literals
 - https://www.w3schools.com/python/python_variables.asp
 - https://realpython.com/python-variables/#object-identity
+- https://www.geeksforgeeks.org/__name__-special-variable-python/
+- https://www.geeksforgeeks.org/use-yield-keyword-instead-return-keyword-python/
 
 #### Operators in Python
 - https://www.geeksforgeeks.org/basic-operators-python/
