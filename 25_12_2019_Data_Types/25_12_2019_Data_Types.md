@@ -170,6 +170,7 @@ print(len(tuple2))
 ```sh
  2
 ```
+
 ## Set in Python
 - A Set is an unordered collection data type that is iterable, mutable, and has no duplicate elements.
 - Sets can be used to perform mathematical set operations like union, intersection, symmetric difference etc.
@@ -1143,6 +1144,52 @@ for r in T:
 10 8 12 5 
 ```
 
+## Some function wich can be used with all DataTypes
+
+### any() function inython
+- Python any() function accepts iterable (list, tuple, dictionary etc.) as an argument and return true if any of the element in iterable is true, else it returns false. If iterable is empty then any() method returns false.
+- The any() function returns true if any of the element in the passed list is true.
+
+```sh
+# all values are true
+lis1 = [10, 20, 30, 40]
+print(any(lis1))
+```
+
+##### Output:
+
+```sh
+True
+```
+### all() function in Python
+- If all the elements in the passed iterable are true then all() function returns true else it returns false.
+- If the iterable is empty then also this function returns true.
+- The all() function can be used on any iterable such as lists, tuples, dictionaries etc.
+
+### accumulate() function in python
+- This function makes an iterator that returns the results of a function.
+- Functions can be passed around very much like variables. 
+- The **accumulate()** function takes a function as an argument. It also takes an **iterable**.
+- This **example** uses the max function.
+
+```sh
+data = [5, 2, 6, 4, 5, 9, 1]
+result = itertools.accumulate(data, max)
+for each in result:
+    print(each)
+```
+
+##### Output:
+```sh
+5
+5
+6
+6
+6
+9
+9
+```
+
 ## Reference links
 
 ### Data types in Python
@@ -1178,6 +1225,7 @@ for r in T:
 ### Dictionaries and its use
 - https://www.geeksforgeeks.org/python-dictionary/
 - https://www.programiz.com/python-programming/dictionary
+- https://www.w3schools.com/python/ref_dictionary_popitem.asp
 
 ### Array and its types
 - https://www.geeksforgeeks.org/python-arrays/
@@ -1187,3 +1235,8 @@ for r in T:
 ### Creation and use of multidimensional array
 - https://www.tutorialspoint.com/python_data_structure/python_2darray.htm
 - https://www.geeksforgeeks.org/python-using-2d-arrays-lists-the-right-way/
+
+### Some function wich can be used with all DataTypes
+- https://beginnersbook.com/2019/03/python-any-function/
+- https://beginnersbook.com/2019/03/python-all-function/
+- https://medium.com/@jasonrigden/a-guide-to-python-itertools-82e5a306cdf8
