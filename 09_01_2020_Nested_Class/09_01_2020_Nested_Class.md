@@ -99,6 +99,121 @@ class Number:
 - This automatic destruction of unreferenced objects in Python is also called garbage collection.
 ![](https://cdn.programiz.com/sites/tutorial2program/files/objectReference.jpg)
 
+## Abstraction in Python
+- An abstract class can be considered as a blueprint for other classes, allows you to create a set of methods that must be created within any child classes built from your abstract class.
+-  A class which contains one or abstract methods is called an abstract class.
+-  An abstract method is a method that has declaration but not has any implementation.
+- bstract classes are not able to instantiated and it needs subclasses to provide implementations for those abstract methods which are defined in abstract classes.
+
+##### Below code is a simple example of program providing abstraction
+
+```sh
+# Python program showing 
+# abstract base class work 
+
+from abc import ABC, abstractmethod 
+class Animal(ABC): 
+
+	def move(self): 
+		pass
+
+class Human(Animal): 
+
+	def move(self): 
+		print("I can walk and run") 
+
+class Snake(Animal): 
+
+	def move(self): 
+		print("I can crawl") 
+
+class Dog(Animal): 
+
+	def move(self): 
+		print("I can bark") 
+
+class Lion(Animal): 
+
+	def move(self): 
+		print("I can roar") 
+		
+# Driver code 
+R = Human() 
+R.move() 
+
+K = Snake() 
+K.move() 
+
+R = Dog() 
+R.move() 
+
+K = Lion() 
+K.move() 
+```
+
+##### Output:
+
+```sh
+I can walk and run
+I can crawl
+I can bark
+I can roar
+```
+
+## Polymorphism and its types
+- The word polymorphism means having many forms. In programming, polymorphism means same function name (but different signatures) being uses for different types.
+
+##### Example:
+
+```sh
+# A simple Python function to demonstrate 
+# Polymorphism 
+
+def add(x, y, z = 0): 
+	return x + y+z 
+
+# Driver code 
+print(add(2, 3)) 
+print(add(2, 3, 4)) 
+```
+
+##### Output:
+
+```sh
+5
+9
+```
+
+## Inheritance for reusability and its types
+- Inheritance allows us to define a class that inherits all the methods and properties from another class.
+Parent class is the class being inherited from, also called base class.
+Child class is the class that inherits from another class, also called derived class.
+
+##### Example:
+
+```sh
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+
+  def printname(self):
+    print(self.firstname, self.lastname)
+
+#Use the Person class to create an object, and then execute the printname method:
+
+x = Person("John", "Doe")
+x.printname()
+```
+##### Output:
+
+```sh
+John Doe
+```
+- Depending upon the number of child and parent classes involved, there are four types of inheritance in python.
+![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/07/inheritance.png)
+
+
 ## Reference
 ### Nested class and its use
 - https://www.novixys.com/blog/nested-inner-classes-python/
@@ -112,3 +227,10 @@ class Number:
 
 ### Constructor and its types
 - https://www.programiz.com/python-programming/class
+
+### Polymorphism and its types
+- https://www.geeksforgeeks.org/polymorphism-in-python/
+
+### Inheritance for reusability and its types
+- https://www.w3schools.com/python/python_inheritance.asp
+- https://www.edureka.co/blog/inheritance-in-python/
