@@ -621,6 +621,7 @@ z = 1j   # complex
 - https://realpython.com/python-variables/#object-identity
 - https://www.geeksforgeeks.org/__name__-special-variable-python/
 - https://www.geeksforgeeks.org/use-yield-keyword-instead-return-keyword-python/
+- https://www.youtube.com/watch?v=pzNISmtmzcY
 
 #### Operators in Python
 - https://www.geeksforgeeks.org/basic-operators-python/
