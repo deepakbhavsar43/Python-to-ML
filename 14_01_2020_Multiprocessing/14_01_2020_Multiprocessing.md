@@ -105,8 +105,14 @@ p2.join()
 - The opposite of single threaded processes are multithreaded processes. These processes allow the execution of multiple parts of a program at the same time. These are lightweight processes available within the process
 
 ## Parallel programming in Python using Pool class
-
-
+- Another and more convenient approach for simple parallel processing tasks is provided by the Pool class.
+- There are four methods that are particularly interesting:
+	- Pool.apply
+	- Pool.map
+	- Pool.apply_async
+	- Pool.map_async
+- The **Pool.apply** and **Pool.map** methods are basically equivalents to Pythons in-built apply and map functions.
+- 
 ## Reference Links
 ### Multiprocessing application development
 - https://www.geeksforgeeks.org/multiprocessing-python-set-1/
@@ -119,7 +125,7 @@ p2.join()
 ### Thread Synchronisation techniques
 - https://www.geeksforgeeks.org/multithreading-in-python-set-2-synchronization/
 
-### Single threaded vs multithread application development
-
-
 ### Parallel programming in Python using Pool class
+- https://sebastianraschka.com/Articles/2014_multiprocessing.html#the-pool-class
+- https://www.youtube.com/watch?v=u2jTn-Gj2Xw
+- https://www.youtube.com/watch?v=fKl2JW_qrso
