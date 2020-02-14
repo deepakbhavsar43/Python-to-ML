@@ -3,22 +3,34 @@
 use music
 ```
 -  To insert data into collection. If the collection doesn't exist, it will be created:
-		db.artists.insert({ artistname: "The Tea Party" })
+```sh
+db.artists.insert({ artistname: "The Tea Party" })
+```
 
 -  You can see the database in your list of databases by issuing the following command:
-		show databases
+```sh
+show databases
+```
 
 - You can also run the following line to view the contents of your database:
-		db.artists.+()
+```sh
+db.artists.+()
+```
 
 - You can also create collection using createCollection() method:
-		db.createCollection("producers")
+```sh
+db.createCollection("producers")
+```
 
 - To create a collection with some options:
-		db.createCollection("log", { capped : true, size : 4500500, max : 4000 } )
+```sh
+db.createCollection("log", { capped : true, size : 4500500, max : 4000 } )
+```
 
 - To see all the collections in the database:
-		show collections
+```sh
+show collections
+```
 
 - To insert multiple document in collection:
 ```sh
@@ -51,7 +63,9 @@ db.artists.insert({
 ```
 
 - You can also use the insertOne() method to insert a single document into a collection:
-		db.musicians.insertOne({ _id: 1, name: "Ian Gillan", instrument: "Vocals" })
+```sh
+db.musicians.insertOne({ _id: 1, name: "Ian Gillan", instrument: "Vocals" })
+```
 
 - As with insert(), you can insert embedded documents and arrays of documents:
 ```sh
@@ -124,13 +138,19 @@ db.artists.insertMany(
 ```
 
 - You can filter the results down by providing only the criteria that you're interested in:
-		db.artists.find({artistname: "The Tea Party"})
+```sh
+db.artists.find({artistname: "The Tea Party"})
+```
 
 - To return musicians who play drums and where born before 1950:
-		db.musicians.find( { instrument: "Drums", born: { $lt: 1950 } } )
+```sh
+db.musicians.find( { instrument: "Drums", born: { $lt: 1950 } } )
+```
 
 - To return musicians who play drums and where born after 1950:
-		db.musicians.find( { instrument: "Drums", born: { $gt: 1950 } } )
+```sh
+db.musicians.find( { instrument: "Drums", born: { $gt: 1950 } } )
+```
 
 - To return musicians that either play drums or were born before 1950:
 ```sh
@@ -142,19 +162,31 @@ db.musicians.find(
 ```
 
 - To searching for all musicians who are either on vocals, or play guitar:	
-		db.musicians.find( { instrument: { $in: [ "Vocals", "Guitar" ] } } )
+```sh
+db.musicians.find( { instrument: { $in: [ "Vocals", "Guitar" ] } } )
+```
 
 - To return only sepcific fields from document(projection) and ignore _id as it is returned by default:
-		db.musicians.find( { instrument: "Vocals" }, {_id: 0,  name: 1 } )
+```sh
+db.musicians.find( { instrument: "Vocals" }, {_id: 0,  name: 1 } )
+```
 
 - To limit the documents to be returned. Will show only first 3 documents:
-		db.artists.find( { albums: { $exists: false }} ).limit(3)
+```sh
+db.artists.find( { albums: { $exists: false }} ).limit(3)
+```
 
 - To skip a documents. It will skip the 1st & 2nd document and return the next 3 documents if exist:
-		db.artists.find( { albums: { $exists: false }} ).limit(3).skip(2)
+```sh
+db.artists.find( { albums: { $exists: false }} ).limit(3).skip(2)
+```
 
 - To return documents sorted as per their born date in ascending order:
-		db.musicians.find().sort({born: 1})
+```sh
+db.musicians.find().sort({born: 1})
+```
 
 - The documents will be sorted by the first field specified, then the next, and so on:
-		db.musicians.find( ).sort( { instrument: 1, born: 1 } )
+```sh
+db.musicians.find( ).sort( { instrument: 1, born: 1 } )
+```
