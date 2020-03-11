@@ -1,0 +1,5 @@
+
+7
+Main.py,1\8\1826fc8d86cb86ebc0c3414262d81dc5f5b14ea5
+;
+Settings.py,b\9\b955d853b0ac9e667b46a7a5cd475ea8b7725169
