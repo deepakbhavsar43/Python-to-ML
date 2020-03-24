@@ -21,7 +21,9 @@ class Dataset:
     def read_dataset(self):
         self.dataset["Surface"] = pd.factorize(self.dataset.Surface)[0]
         self.dataset["Label"] = pd.factorize(self.dataset.Label)[0]
+        # Extracting all features
         self.X = self.dataset.drop(["Label"], axis=1)
+        # Extracting all labels
         self.Y = self.dataset["Label"]
         return self.X, self.Y
 
@@ -58,13 +60,16 @@ class Dataset:
         return self.yPredict
 
     def wr_pickle(self, train, model):
-        # self.file = "Trained_Model/trained_data"
+        # creating pickle file
         outfile = open(model, 'wb')
+        # saving trained model in pickle file
         pickle.dump(train, outfile)
         outfile.close()
 
     def rd_pickle(self, model):
+        # opening pickle file
         infile = open(model, 'rb')
+        # loading the saved model into variable newTraining
         self.newTraining = pickle.load(infile)
         return self.newTraining
 
@@ -77,7 +82,7 @@ if __name__ == "__main__":
     xTrain, xTest, yTrain, yTest = obj.split(X, Y)
     d_tree = 0
     if args.train:
-        model= obj.train(xTrain, yTrain)
+        model = obj.train(xTrain, yTrain)
         obj.wr_pickle(model, Trained_Model_File)
         print("Model Trained")
     elif args.test:
