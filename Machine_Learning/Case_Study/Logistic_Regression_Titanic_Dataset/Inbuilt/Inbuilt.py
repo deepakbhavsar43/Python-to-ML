@@ -1,5 +1,7 @@
+from dataframe import DataFrame
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
+import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score
 from userInput import *
 import pandas as pd
@@ -53,6 +55,13 @@ class Dataset:
         self.newTraining = pickle.load(infile)
         return self.newTraining
 
+    def plot_graph(self):
+        y = DataFrame(self.y)
+        print(type(self.x), type(y))
+        plt.scatter(self.x, y)
+        plt.show()
+
+
 
 if __name__ == "__main__":
     Trained_Model_File = "Trained_Model/trained_data"
@@ -67,3 +76,4 @@ if __name__ == "__main__":
         trained = obj.rd_pickle(Trained_Model_File)
         obj.predict_label(trained)
         obj.score(ytest)
+        obj.plot_graph()
