@@ -19,11 +19,11 @@ for i in range(1, 11):
 print(var)
 
 
-plt.figure(figsize=(10,5))
+# plt.figure(figsize=(10,5))
 sns.lineplot(range(1, 11), var,marker='o',color='red')
-plt.title('Elbow')
+plt.title('Elbow Point')
 plt.xlabel('Number of clusters')
-plt.ylabel('WCSS')
+plt.ylabel('variation')
 plt.show()
 
 k_mean = KMeans(n_clusters=3)
@@ -34,10 +34,11 @@ centroids = k_mean.cluster_centers_
 print("\nCentroids : \n", centroids)
 print("\nLabels : \n", k_mean.labels_)
 
+plt.title('Inbuilt')
 plt.plot()
 plt.xlabel('X')
 plt.ylabel('Y')
-
-plt.scatter(df[:,0], df[:,1], c=k_mean.labels_)
-plt.scatter(centroids[:, 0], centroids[:, 1], marker="+", color='red')
+plt.scatter(df[:,0], df[:,1], c=k_mean.labels_, label='datapoints')
+plt.scatter(centroids[:, 0], centroids[:, 1], marker="x", label="Centroids")
+plt.legend()
 plt.show()
