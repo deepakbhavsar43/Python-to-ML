@@ -3,8 +3,8 @@ import pickle
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
-import userInput as uic
-
+# from commands import userInput as uic
+from commands import userInput as uic
 
 # Converted textual data into numbers manually
 # 0 = Rough, Tennis

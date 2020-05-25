@@ -3,7 +3,7 @@ import pandas as pd
 
 from sklearn.metrics import accuracy_score
 
-import userInput as uic
+from commands import userInput as uic
 
 training_data = [
     [35, "Rough", "Tennis"],
