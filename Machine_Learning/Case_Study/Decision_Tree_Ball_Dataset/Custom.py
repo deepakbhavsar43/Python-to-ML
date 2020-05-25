@@ -1,17 +1,24 @@
+import pickle
+import pandas as pd
+
+from sklearn.metrics import accuracy_score
+
+import userInput as uic
+
 training_data = [
-        [35,"Rough","Tennis"],
-        [47,"Rough","Tennis"],
-        [90,"Smooth","Cricket"],
-        [48,"Rough","Tennis"],
-        [90,"Smooth","Cricket"],
-        [35,"Rough","Tennis"],
-        [92,"Smooth","Cricket"],
-        [35,"Rough","Tennis"],
-        [35,"Rough","Tennis"],
-        [35,"Rough","Tennis"],
-        [96,"Smooth","Cricket"],
-        [43,"Rough","Tennis"],
-    ]
+    [35, "Rough", "Tennis"],
+    [47, "Rough", "Tennis"],
+    [90, "Smooth", "Cricket"],
+    [48, "Rough", "Tennis"],
+    [90, "Smooth", "Cricket"],
+    [35, "Rough", "Tennis"],
+    [92, "Smooth", "Cricket"],
+    [35, "Rough", "Tennis"],
+    [35, "Rough", "Tennis"],
+    [35, "Rough", "Tennis"],
+    [96, "Smooth", "Cricket"],
+    [43, "Rough", "Tennis"],
+]
 
 # Column labels.
 header = ["weight", "surface", "label"]
@@ -33,6 +40,7 @@ def class_counts(rows):
 
 def is_numeric(value):
     return isinstance(value, int) or isinstance(value, float)
+
 
 class Question:
 
@@ -63,6 +71,7 @@ def partition(rows, question):
         else:
             false_rows.append(row)
     return true_rows, false_rows
+
 
 def gini(rows):
     counts = class_counts(rows)
@@ -104,6 +113,7 @@ def find_best_split(rows):
 
     return best_gain, best_question
 
+
 class Leaf:
     def __init__(self, rows):
         self.predictions = class_counts(rows)
@@ -131,6 +141,7 @@ def build_tree(rows):
 
     return Decision_Node(question, true_branch, false_branch)
 
+
 def classify(row, node):
     if isinstance(node, Leaf):
         return node.predictions
@@ -149,16 +160,54 @@ def print_leaf(counts):
     return probs
 
 
+def wr_pickle(train, model):
+    # creating pickle file
+    outfile = open(model, 'wb')
+    # saving trained model in pickle file
+    pickle.dump(train, outfile)
+    outfile.close()
+
+
+def rd_pickle(model):
+    # opening pickle file
+    infile = open(model, 'rb')
+    # loading the saved model into variable newTraining
+    newTraining = pickle.load(infile)
+    return newTraining
+
+
 if __name__ == '__main__':
 
-    my_tree = build_tree(training_data)
+    Trained_Model_File = "Trained_Model/Custom/trained_data"
+    # my_tree = None
 
-    testing_data = [
-        [110,"Smooth","Cricket"],
-        [35,"Rough","Tennis"],
-        [95,"Smooth","Cricket"],
-    ]
-
-    for row in testing_data:
-        print("Actual: %s. Predicted: %s" %
-              (row[-1], print_leaf(classify(row, my_tree))))
+    if uic.args.train:
+        my_tree = build_tree(training_data)
+        wr_pickle(my_tree, Trained_Model_File)
+        print("Model Trained")
+    elif uic.args.test:
+        my_tree = rd_pickle(Trained_Model_File)
+        testing_data = [
+            [110, "Smooth", "Cricket"],
+            [35, "Rough", "Tennis"],
+            [95, "Smooth", "Cricket"],
+        ]
+        actual, predicted = [], []
+        for row in testing_data:
+            actual.append(row[-1])
+            temp = print_leaf(classify(row, my_tree))
+            key = list(temp)
+            predicted.append(key[0])
+            # print("Actual: %s. Predicted: %s" %(row[-1], print_leaf(classify(row, my_tree))))
+        actual = pd.factorize(actual)[0]
+        predicted = pd.factorize(predicted)[0]
+        print("Model Tested")
+        print("Accuracy of the model : ", accuracy_score(actual, predicted, sample_weight=None)*100)
+    elif uic.args.predict:
+        my_tree = rd_pickle(Trained_Model_File)
+        input_data = []
+        temp = [uic.args.weight, uic.args.surface]
+        # input_data.append(temp)
+        lable = print_leaf(classify(temp, my_tree))
+        lable = list(lable)
+        print(lable[0])
