@@ -17,3 +17,13 @@ There are various application/scope of Sentiment Analysis. Below are some use ca
 Flow diagram is a collective term for a diagram representing a flow or set of dynamic relationships in a system. The term flow diagram is also used as a synonym for flowchart.
 
 ![Flow Diagram](https://github.com/isaacramthal/deepak.bhavsar-works/blob/feature/Sentiment_Analysis_NLTK/Project/Sentiment_Analysis_Using_NLTK/snapshots/flow_diagram.png)
+
+#### Deploying project on AWS 
+To deploy project on AWS:
+- create an EC2 instance
+![Instances](https://github.com/isaacramthal/deepak.bhavsar-works/blob/feature/Sentiment_Analysis_NLTK/Project/Sentiment_Analysis_Using_NLTK/snapshots/Instances.PNG)
+- Create a security group
+![Create security group](https://github.com/isaacramthal/deepak.bhavsar-works/blob/feature/Sentiment_Analysis_NLTK/Project/Sentiment_Analysis_Using_NLTK/snapshots/creating%20group.PNG)
+- Add security rules to your instance through network interface
+![Add Rule](https://github.com/isaacramthal/deepak.bhavsar-works/blob/feature/Sentiment_Analysis_NLTK/Project/Sentiment_Analysis_Using_NLTK/snapshots/add_rules_in_group.PNG)
+- 
