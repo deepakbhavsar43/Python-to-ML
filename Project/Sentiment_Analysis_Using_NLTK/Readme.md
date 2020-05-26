@@ -25,28 +25,32 @@ Flow diagram is a collective term for a diagram representing a flow or set of dy
 To deploy project on AWS, First creat an instance. Step to create instance are as given below:
 
 - Click on “Services” at the upper left corner on AWS main console and you will see the following screen with all the services available on AWS. Click on "EC2" available under “Compute.
-
 <p align="center"><img src="https://github.com/isaacramthal/deepak.bhavsar-works/blob/feature/Sentiment_Analysis_NLTK/Project/Sentiment_Analysis_Using_NLTK/snapshots/Main_console.PNG" /></p>
 
-- To create an instance, click on "Launch Instance"
 
+- To create an instance, click on "Launch Instance"	
 <p align="center"><img src="https://github.com/isaacramthal/deepak.bhavsar-works/blob/feature/Sentiment_Analysis_NLTK/Project/Sentiment_Analysis_Using_NLTK/snapshots/Launch_Instance.PNG" /></p>
+
 
 - You can select an AMI of your choice. Here, we will proceed with "Ubuntu Server 18.04". If you are using a Free Tier Account, make sure to select the AMI which is eligible for Free Tier Usage else you will be charged for it. "Ubuntu Server 18.04" is eligible for Free Tier so you can proceed with this.
 
 <p align="center"><img src="https://github.com/isaacramthal/deepak.bhavsar-works/blob/feature/Sentiment_Analysis_NLTK/Project/Sentiment_Analysis_Using_NLTK/snapshots/choose_ami.PNG" /></p>
 
+
 - Once you have selected an AMI, it's time to select the Instance Type. Here, we shall proceed with "t2.micro" as it is eligible for Free Tier Account.
 
 <p align="center"><img src="https://github.com/isaacramthal/deepak.bhavsar-works/blob/feature/Sentiment_Analysis_NLTK/Project/Sentiment_Analysis_Using_NLTK/snapshots/Choose_Instance_Type.PNG" /></p>
+
 
 - On this screen, you can specify the details or you can just click on "Next: Add Storage" to proceed with the default settings. Here, we shall proceed with the default settings.
 
 <p align="center"><img src="https://github.com/isaacramthal/deepak.bhavsar-works/blob/feature/Sentiment_Analysis_NLTK/Project/Sentiment_Analysis_Using_NLTK/snapshots/configure_instance.PNG" /></p>
 
+
 - You can specify the size for the root partition. I have just proceed with the default Root Partition Size as 8 GBs. Click on “Next: Add Tags” to proceed.
 
 <p align="center"><img src="https://github.com/isaacramthal/deepak.bhavsar-works/blob/feature/Sentiment_Analysis_NLTK/Project/Sentiment_Analysis_Using_NLTK/snapshots/Add_Storage.PNG" /></p>
+
 
 - You can specify Tags (Key:Value) or can skip this step and click on “Next: Configure Security Group”
 
@@ -54,17 +58,21 @@ To deploy project on AWS, First creat an instance. Step to create instance are a
 
 <p align="center"><img src="https://github.com/isaacramthal/deepak.bhavsar-works/blob/feature/Sentiment_Analysis_NLTK/Project/Sentiment_Analysis_Using_NLTK/snapshots/comfigre_security_group.PNG" /></p>
 
+
 - Now, review your configuration and click on “Launch”
 
 <p align="center"><img src="https://github.com/isaacramthal/deepak.bhavsar-works/blob/feature/Sentiment_Analysis_NLTK/Project/Sentiment_Analysis_Using_NLTK/snapshots/review_and_launch.PNG" /></p>
+
 
 - Before the instance creation starts, we need to select a Key-Pair which is then required to take ssh access to the server. To create a new Key-Pair, select “Create a new Key-Pair” from the drop-down menu, give a name to the Key-Pair and download it. Keep this Key-Pair at a safe place.
 
 <p align="center"><img src="https://github.com/isaacramthal/deepak.bhavsar-works/blob/feature/Sentiment_Analysis_NLTK/Project/Sentiment_Analysis_Using_NLTK/snapshots/key%20pair.PNG" /></p>
 
+
 - Wait for some time until the instance gets created. Click on “View Instances” to check the Instance State and other details.
 
 <p align="center"><img src="https://github.com/isaacramthal/deepak.bhavsar-works/blob/feature/Sentiment_Analysis_NLTK/Project/Sentiment_Analysis_Using_NLTK/snapshots/instance_created.PNG" /></p>
+
 
 - Once the Instance State changes from “pending” to ‘running’ you can connect to the instance.
 
@@ -97,6 +105,7 @@ PuTTY does not natively support the private key format for SSH keys. PuTTY provi
 ![type of key to generate](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/images/puttygen-key-type.png)
 
 3. Choose Load. By default, PuTTYgen displays only files with the extension .ppk. To locate your .pem file, choose the option to display files of all types.
+
 ![locate pem file](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/images/puttygen-load-key.png)
 
 4. Select your .pem file for the key pair that you specified when you launched your instance and choose Open. PuTTYgen displays a notice that the .pem file was successfully imported. Choose OK.
