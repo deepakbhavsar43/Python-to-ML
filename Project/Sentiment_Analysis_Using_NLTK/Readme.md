@@ -93,9 +93,9 @@ The operating system of your local computer determines the options that you have
 	- AWS Systems Manager Session Manager
 	- Windows Subsystem for Linux
 
-#### Connecting to your Linux instance from Windows using PuTTY
+### Connecting to your Linux instance from Windows using PuTTY
 
-##### Convert your private key using PuTTYgen
+#### Convert your private key using PuTTYgen
 PuTTY does not natively support the private key format for SSH keys. PuTTY provides a tool named PuTTYgen, which converts keys to the required format for PuTTY. You must convert your private key (.pem file) into this format (.ppk file) as follows in order to connect to your instance using PuTTY.
 
 *To convert your private key*
@@ -115,7 +115,7 @@ PuTTY does not natively support the private key format for SSH keys. PuTTY provi
 
 Your private key is now in the correct format for use with PuTTY. You can now connect to your instance using PuTTY's SSH client.
 
-##### To connect to your instance using PuTTY
+#### To connect to your instance using PuTTY
 
 1. Start PuTTY (from the Start menu, choose All Programs, PuTTY, PuTTY).
 
@@ -144,7 +144,7 @@ For information about how to get the user name for your instance, and the public
 	a. (Optional) Verify that the fingerprint in the security alert dialog box matches the fingerprint that you previously obtained in (Optional) Get the instance fingerprint. If these fingerprints don't match, someone might be attempting a "man-in-the-middle" attack. If they match, continue to the next step.
 	b. Choose Yes. A window opens and you are connected to your instance.
 
-##### Transferring files to your Linux instance using WinSCP
+#### Transferring files to your Linux instance using WinSCP
 
 To use WinSCP, you need the private key that you generated in Convert your private key using PuTTYgen. You also need the public DNS name of your Linux instance.
 
