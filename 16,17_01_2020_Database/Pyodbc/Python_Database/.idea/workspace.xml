@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3a2e0591-d494-41be-ba92-e661bddabdbd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1XT8dewb9vEAzbgMR8z3HbBdKne" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../package_demo" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\deepak.bhavsar\PycharmProjects\Python_Database\venv\Packages" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="Connection (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python_Database" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\deepak.bhavsar\PycharmProjects\Python_Database\venv\Packages\Connection.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Connection" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python_Database" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/Packages" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/Packages/Connection.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CrudOperation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python_Database" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/Packages" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/Packages/CrudOperation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python_Database" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/Packages" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/Packages/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python_Database" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.CrudOperation" />
+        <item itemvalue="Python.Connection" />
+        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.Connection (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3a2e0591-d494-41be-ba92-e661bddabdbd" name="Default Changelist" comment="" />
+      <created>1581058812758</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581058812758</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="530" y="211" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581071559483">
+      <screen x="0" y="30" width="1600" height="870" />
+    </state>
+    <state x="530" y="211" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1600.870@0.30.1600.870" timestamp="1581071559483" />
+    <state x="980" y="223" key="FileChooserDialogImpl" timestamp="1581070432248">
+      <screen x="0" y="30" width="1600" height="870" />
+    </state>
+    <state x="980" y="223" key="FileChooserDialogImpl/0.30.1600.870@0.30.1600.870" timestamp="1581070432248" />
+    <state width="1579" height="225" key="GridCell.Tab.0.bottom" timestamp="1581319357219">
+      <screen x="0" y="30" width="1600" height="870" />
+    </state>
+    <state width="1579" height="225" key="GridCell.Tab.0.bottom/0.30.1600.870@0.30.1600.870" timestamp="1581319357219" />
+    <state width="1579" height="225" key="GridCell.Tab.0.center" timestamp="1581319357218">
+      <screen x="0" y="30" width="1600" height="870" />
+    </state>
+    <state width="1579" height="225" key="GridCell.Tab.0.center/0.30.1600.870@0.30.1600.870" timestamp="1581319357218" />
+    <state width="1579" height="225" key="GridCell.Tab.0.left" timestamp="1581319357218">
+      <screen x="0" y="30" width="1600" height="870" />
+    </state>
+    <state width="1579" height="225" key="GridCell.Tab.0.left/0.30.1600.870@0.30.1600.870" timestamp="1581319357218" />
+    <state width="1579" height="225" key="GridCell.Tab.0.right" timestamp="1581319357219">
+      <screen x="0" y="30" width="1600" height="870" />
+    </state>
+    <state width="1579" height="225" key="GridCell.Tab.0.right/0.30.1600.870@0.30.1600.870" timestamp="1581319357219" />
+    <state x="496" y="288" key="com.intellij.ide.util.TipDialog" timestamp="1581400566683">
+      <screen x="0" y="30" width="1600" height="870" />
+    </state>
+    <state x="496" y="288" key="com.intellij.ide.util.TipDialog/0.30.1600.870@0.30.1600.870" timestamp="1581400566683" />
+    <state x="463" y="212" width="672" height="678" key="search.everywhere.popup" timestamp="1581314925547">
+      <screen x="0" y="30" width="1600" height="870" />
+    </state>
+    <state x="463" y="212" width="672" height="678" key="search.everywhere.popup/0.30.1600.870@0.30.1600.870" timestamp="1581314925547" />
+  </component>
+</project>
